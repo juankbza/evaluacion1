@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/routes/app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
    
@@ -11,15 +12,33 @@ class HomeScreen extends StatelessWidget {
 
     appBar: AppBar(
 
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.deepOrange,
       title: const Text('ContadorApp'),
 
     ),
 
-      body: Center(
+      body: ListView.separated(
 
-         child: Text('HomeScreen'), 
+        itemCount: AppRoutes.menuOption.length,//con esto tambien puedo hacer la lista que quiero de info personal
+        separatorBuilder: (BuildContext context,int index) {
 
+          return const Divider();
+
+        },
+
+        itemBuilder: (BuildContext context, int index) {
+
+          return ListTile(
+
+            title: Text(AppRoutes.menuOption[index].name),
+            onTap: () => Navigator.pushNamed(context, AppRoutes.menuOption[index].route),
+            leading:  Icon(AppRoutes.menuOption[index].icon),
+
+            
+
+          );
+
+        },
       ),
     );
   }

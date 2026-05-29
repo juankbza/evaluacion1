@@ -1,3 +1,8 @@
+
+
+//esto fue de prueba pero no me gusto y me quede con el listview.separated del information_screen ya que me gusto mas como quedo
+
+
 import 'package:flutter/material.dart';
 
 class ListViewScreen extends StatelessWidget {
