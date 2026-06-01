@@ -210,7 +210,7 @@ class _JuegoScreenState extends State<JuegoScreen> {
                     child: SizedBox(
                       width: tamanoTung,
                       height: tamanoTung,
-                      child: Image.asset('assets/tung_tung.png', fit: BoxFit.contain), 
+                      child: Image.asset('assets/TTTsahur.jpg', fit: BoxFit.contain), 
                     ),
                   ),
                 ],
