@@ -16,23 +16,44 @@ class InformationScreen extends StatelessWidget {
 
   ];
    
-  const InformationScreen({Key? key}) : super(key: key);
+  const InformationScreen({super.key});
   
   @override
   Widget build(BuildContext context) {
 
     return  Scaffold(
 
+    backgroundColor: const Color.fromARGB(255, 219, 153, 216) ,
+
     appBar: AppBar(
-
-      backgroundColor: Colors.deepOrange,
-
-      title: const Text('Desarrollador',
-      //style: TextStyle(),probando el style
-
-      ),
       
+      backgroundColor: const Color.fromARGB(255, 165, 14, 157),
+
+      title: const Text('Desarrollador'),
+      titleTextStyle: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
+   
+
       centerTitle: false,//solo para probar
+
+      
+
+      actions: [
+
+        
+
+        Container(
+
+          margin: const EdgeInsets.only(right: 20) ,
+          child: CircleAvatar(
+
+            
+            radius: 25,
+            backgroundImage: AssetImage('assets/yo.jpeg'),
+          
+          ),
+        )
+        
+      ],
 
     ),
 
@@ -58,8 +79,10 @@ class InformationScreen extends StatelessWidget {
             
 
           );
+          
         },
       ),
+      
     );
   }
 }

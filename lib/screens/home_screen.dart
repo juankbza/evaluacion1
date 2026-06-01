@@ -12,8 +12,9 @@ class HomeScreen extends StatelessWidget {
 
     appBar: AppBar(
 
-      backgroundColor: Colors.deepOrange,
+      backgroundColor: const Color.fromARGB(255, 165, 14, 157),
       title: const Text('ContadorApp'),
+      titleTextStyle: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
 
     ),
 
